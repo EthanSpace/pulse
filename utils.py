@@ -2,6 +2,7 @@ import torchvision
 import numpy as np
 import os
 from torch.nn.functional import relu
+import matplotlib.pyplot as plt
 
 def save_vars(best_vars, path):
     image_dict = {x: y for (x, y) in best_vars.items() if 'image' in x}

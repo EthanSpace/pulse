@@ -185,7 +185,7 @@ class SR(torch.nn.Module):
                  for x in noise]
             if(self.monte_carlo):
                 for i in range(18):
-                    if(i not in var_idx):
+                    if(i not in var_list):
                         res = (1, 1, 2**(i//2+2), 2**(i//2+2))
                         if(self.noise_type == 'zero' or i in bad_noise_layers):
                             new_noise = torch.zeros(
